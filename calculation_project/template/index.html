@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculation Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<div class="container p-3 my-3 border">
+  <h5>Welcome To calculation app</h5>
+  <p>This is fast and dynamic calculation app. when you change any input value you need to press convert button to regenerate output value </p>
+    <hr>
+    <div class="container" style="font-size:13px;">
+
+        <div class="row">
+            <div class="col-md-6 p-2 border" style="background:#dfe6e9;">
+                <h5 style="color:red;">Input Element</h5>
+                <hr>
+                <h6>Pipe Data</h6>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Description</th>
+                        <th>Value (unit)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Pipe Outside Diameter (OD)</td>
+                        <td><input id="ib5" type="number" value="10.75"> in</td>
+                      </tr>
+                      <tr>
+                        <td>Pipe Wall Thickness (t)</td>
+                        <td><input id="ib6" type="number" value="0.5"> in</td>
+                      </tr>
+                      <tr>
+                        <td>Pipe Density</td>
+                        <td><input id="ib7" type="number" value="490"> lb/ft3</td>
+                      </tr>
+                    <tr>
+                        <td>Corrosion Allowance</td>
+                        <td><input id="ib8" type="number" value="0.125"> in</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                <br>
+                <h6>External Coating Data</h6>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Coating No</th>
+                        <th>Description</th>
+                        <th>Thickness(in)</th>
+                        <th>Density(lb/ft3)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>FBE</td>
+                        <td><input id="ic11" type="number" value="0.0118"></td>
+                        <td><input id="id11" type="number" value="81.16"></td>
+                      </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h6>Pipeline Contents Data</h6>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Description</th>
+                        <th>Content</th>
+                        <th>Density(lb/ft3)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Installation Empty</td>
+                        <td>Air</td>
+                        <td><input id="ic15" type="number" value="0"></td>
+                      </tr>
+
+                     <tr>
+                        <td>Flooded</td>
+                        <td>Water</td>
+                        <td><input id="ic16" type="number" value="64"></td>
+                      </tr>
+
+                      <tr>
+                        <td>Hydrotest</td>
+                        <td>Sea Water</td>
+                        <td><input id="ic17" type="number" value="64.7"></td>
+                      </tr>
+                    </tbody>
+                </table>
+
+
+
+            </div>
+            <div class="col-md-6 p-2 border">
+                <h5 style="color:green;">Calculated values</h5>
+                <hr>
+                <h6>Calculation details</h6>
+
+                <table class="table table-bordered">
+                        <thead>
+                              <tr>
+                                <th>Description</th>
+                                <th>Value (unit)</th>
+                              </tr>
+                        </thead>
+                        <tbody>
+                              <tr>
+                                <td>Pipe Inside Radius - r1</td>
+                                <td><input id="oe3" type="number" value="4.88"> in</td>
+                              </tr>
+                              <tr>
+                                <td>Pipe Outside Radius - r2</td>
+                                <td><input id="oe4" type="number" value="5.3750"> in</td>
+                              </tr>
+                              <tr>
+                                <td>Outer Radius of Coating 1 - r3</td>
+                                <td><input id="oe5" type="number" value="5.3809"> in</td>
+                              </tr>
+
+                            <tr>
+                                <td>Total Pipeline Outside Diameter</td>
+                                <td><input id="oe6" type="number" value="10.76"> in</td>
+                            </tr>
+                        </tbody>
+                </table>
+                <br>
+
+                <h6>Calculate Dry Unit Weight</h6>
+                 <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Description</th>
+                        <th>Instalation Empty</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Pipe Weight per Unit Length in Air (lb/ft):</td>
+                        <td><input id="oe9" type="number" value="54.79"></td>
+                      </tr>
+                      <tr>
+                        <td>Coating 1 Wt. per Unit Length in Air (lb/ft):</td>
+                        <td><input id="oe10" type="number" value="0.11"></td>
+                      </tr>
+                      <tr>
+                        <td>Contents Wt. Per Unit Length in Air (lb/ft):</td>
+                        <td><input id="oe11" type="number" value="0.00"></td>
+                      </tr>
+                    <tr>
+                        <td>Total Weight per Unit Length in Air (lb/ft):</td>
+                        <td><input id="oe12" type="number" value="54.90"></td>
+                    </tr>
+                     <tr>
+                        <td>Buoyant Force per Unit Length (lb/ft):</td>
+                        <td><input id="oe13" type="number" value="40.87"></td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+                <br>
+
+                <h6>Summary of Submerged Weight</h6>
+
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Description</th>
+                        <th>Submerged Weight/Unit Length (lb/ft)</th>
+                        <th>Subm. Specific Gravity with respect to S.W.</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Installation Empty</td>
+                        <td><input id="ob18" type="number" value="14.03"></td>
+                        <td><input id="oc18" type="number" value="1.34"></td>
+                      </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+
+    </div>
+     <button class="btn btn-lg btn-primary btn-block" onclick="my_calculation_function()">- Convert It Now -</button>
+</div>
+
+
+
+<script>
+
+    function my_calculation_function()
+    {
+
+    var PI=3.1416
+
+    var ib5 =parseFloat (document.getElementById('ib5').value);
+    var ib6 =parseFloat (document.getElementById('ib6').value);
+    var ib7 =parseFloat (document.getElementById('ib7').value);
+    var ib8 =parseFloat (document.getElementById('ib8').value);
+    var ic11 =parseFloat (document.getElementById('ic11').value);
+    var id11 =parseFloat (document.getElementById('id11').value);
+    var ic15 =parseFloat (document.getElementById('ic15').value);
+    var ic17 =parseFloat (document.getElementById('ic17').value);
+
+
+    var oe3 = (ib5- 2*ib6)/2;
+    var oe4 = ib5/2;
+    var oe5 = oe4+(ic11/2);
+    var oe6 = oe5*2;
+
+    document.getElementById('oe3').value = oe3.toFixed(2);
+    document.getElementById('oe4').value = oe4.toFixed(4);
+    document.getElementById('oe5').value = oe5.toFixed(4);
+    document.getElementById('oe6').value = oe6.toFixed(2);
+
+
+
+
+    oe9 = PI*((oe4*oe4)-(oe3*oe3))/144*ib7;
+    oe10 = PI*((oe5*oe5)-(oe4*oe4))/144*id11;
+    oe11 = PI*((oe3*oe3))/144*ic15;
+    oe12 = oe9+oe10+oe11;
+    oe13 = PI*(oe5*oe5)/144*ic17
+
+
+    document.getElementById('oe9').value = oe9.toFixed(2);
+    document.getElementById('oe10').value = oe10.toFixed(2);
+    document.getElementById('oe11').value = oe11.toFixed(2);
+    document.getElementById('oe12').value = oe12.toFixed(2);
+    document.getElementById('oe13').value = oe13.toFixed(2);
+
+    ob18 = oe12-oe13;
+    oc18 = oe12/oe13;
+    document.getElementById('ob18').value = ob18.toFixed(2);
+    document.getElementById('oc18').value = oc18.toFixed(2);
+
+    }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
